@@ -1,24 +1,25 @@
 {{#staff}}
-<h1>Detail osoby {{name}}</h1>
-<dl>
-    <dt>Jméno</dt>
-    <dd>{{name}}</dd>
+    <h1>Detail osoby {{name}}</h1>
+    <dl>
+        <dt>Jméno</dt>
+        <dd>{{name}}</dd>
 
-    <dt>Příjmení</dt>
-    <dd>{{surname}}</dd>
+        <dt>Příjmení</dt>
+        <dd>{{surname}}</dd>
 
-    <dt>Pozice</dt>
-    <dd>{{job}}</dd>
+        <dt>Práce</dt>
+        <dd>{{job}}</dd>
 
-    <dt>Telefon</dt>
-    <dd>{{#phone}}{{phone}}{{/phone}}{{^phone}}&mdash;{{/phone}}</dd>
+        <dt>Wage</dt>
+        <dd>{{wage}}</dd>
 
+        <dt>Login</dt>
+        <dd>{{login}}</dd>
 
-    <dt>Místnosti</dt>
-    {{#room}}
-        <dd>
-            <a href='employee.php?employee_id={{employee_id}}'>{{surname}} {{name}}</a>
-        </dd>
-    {{/room}}
-</dl>
+        <dt>Password</dt>
+        <dd>{{password}}</dd>
+
+        <dt>Admin</dt>
+        <dd>{{admin}}</dd>
+    </dl>
 {{/staff}}
