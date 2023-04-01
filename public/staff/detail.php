@@ -23,7 +23,7 @@ class StaffDetailPage extends BasePage
 
 
         //$stmt = PDOProvider::get()->prepare("SELECT `surname`, `name`, `employee_id` FROM `employee` WHERE `room`= :roomId ORDER BY `surname`, `name`");
-        $stmt = PDOProvider::get()->prepare("SELECT ro.name, ro.room_id FROM `room` AS ro JOIN `employee` AS em ON ro.room_id = em.room WHERE em.employee_id = :emloyeeId");
+        $stmt = PDOProvider::get()->prepare("SELECT * FROM employee WHERE employee_id = :emloyeeId");
         $stmt->execute(['emloyeeId' => $staffId]);
         $this->employees = $stmt->fetchAll();
         $this->title = "Detail osoby {$this->staff->name}";
